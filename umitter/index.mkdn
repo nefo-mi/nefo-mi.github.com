@@ -1,0 +1,75 @@
+# OAuth認証を使ったTwitter Bot開発
+
+## 所属： 株式会社 オーシーシー
+## 名前： 根保 光秀(ねほ みつひで)
+## [Twitter:](http://twitter.com/nefo_mi) nefo\_mi
+## [Github:](http://github.com/mitsuhide) mitsuhide
+
+# 突然ですがごめんなさい
+
+## × Outh認証を使ったTwitter Bot開発
+## ○ OAuth認証を使ったTwitter Bot開発
+
+タイポしてましたごめんなさい。
+以下OAuthでお送りします。
+
+# どこからきたの？
+
+## はごー勉強会からやってきました。
+社内の新しい物好きが寄り集まってできた勉強会
+- [まとめ？さいと](http://tomohiro.github.com/)
+
+### 県内の他の勉強会と連携していけたらいいな！
+
+# OAuth認証によるTwitter Botのつくりかた
+
+## Twitterってなに？
+ - [Twitter:](http://twitter.com/) これ
+ - 国会議員もやってるWebサービス
+ - 最近ドラマ化されましたね
+
+### Twitterで遊びたい！
+ - ロボット作る(BOT)
+ - クライアントをつくる
+ - つぶやきを解析したり(集合知)
+
+# Twitterで遊ぶためにはユーザ認証が必要
+なにはともあれ認証しないとTwitterで遊べない.
+
+## なんでOAuthなの？
+
+### Basic認証は使えなくなる。
+ - [Twitter Api](http://apiwiki.twitter.com/OAuth-FAQ)
+ - We announced in December of 2009 the deprecation of Basic Auth.  Its removal date from the platform is set for *June 2010.*
+
+### セキュリティが大事な世の中
+ - [Uniqlo Lucky Line](http://japan.cnet.com/marketing/story/0,3800080523,20413873,00.htm) Twitterを使ったプロモーションサイト
+ - ユーザ名の書かれたテキストファイルが流出した！
+ - パスワードは流出していないが、Basic認証だったため不安が広がった。
+
+# OAuth認証超概要
+
+## サービスプロバイダー
+  ここではTwitter
+## コンシューマ
+  ここではBot(うみったー)
+## ユーザ
+
+![OAuth超概要図](./OAuth.png "OAuth超概要図")
+
+# うみったー
+[umitter](http://twitter.com/umitter)
+[github/umitter](http://github.com/mitsuhide/umitter)
+## 沖縄の海の情報とおすすめのスポットをつぶやくだけのロボット
+
+[WeatherUnderground](http://nihongo.wunderground.com/global/stations/47930.html)から情報を取得してオススメスポットをつぶやく
+
+## おすすめのスポットは僕の経験から選ばれる
+### 現在は五箇所だけ
+
+# 僕とともに成長するBot
+## 経験をプログラミングする
+## Bot作りたくなってきたでしょう？
+
+# 自分だけのBotをつくってみませんか？
+ご清聴ありがとうございました。
