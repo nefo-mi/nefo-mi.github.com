@@ -1,75 +1,172 @@
-# OAuth認証を使ったTwitter Bot開発
-
-## 所属： 株式会社 オーシーシー
-## 名前： 根保 光秀(ねほ みつひで)
-## [Twitter:](http://twitter.com/nefo_mi) nefo\_mi
-## [Github:](http://github.com/mitsuhide) mitsuhide
+theme: i18n
+title: OAuth認証を使ったTwitter Bot開発
+subtitle: はごー勉強会
+company: 株式会社 オーシーシー
+author: 根保 光秀(ねほ みつひで)
+footer: 株式会社 オーシーシー
+subfooter: HagoACK
 
 # 突然ですがごめんなさい
 
-## × Outh認証を使ったTwitter Bot開発
+## × Oath認証を使ったTwitter Bot開発
+
 ## ○ OAuth認証を使ったTwitter Bot開発
 
 タイポしてましたごめんなさい。
 以下OAuthでお送りします。
 
-# どこからきたの？
+# agenda
 
-## はごー勉強会からやってきました。
+## お詫びと訂正
+
+## 自己紹介
+
+## OAuth認証とは(概要)
+
+## うみったーについて
+
+テクニカルなお話は少なめでお送りします。
+
+# 自己紹介
+
+- 情報工 長山研卒
+- [Twitter:](http://twitter.com/nefo_mi) nefo\_mi
+- [Github:](http://github.com/mitsuhide) mitsuhide
+
+## どこからきたの？
+
+### はごー勉強会からやってきました。
+
 社内の新しい物好きが寄り集まってできた勉強会
-- [まとめ？さいと](http://tomohiro.github.com/)
+- [まとめさいと](http://tomohiro.github.com/)
 
-### 県内の他の勉強会と連携していけたらいいな！
+### 他の勉強会と連携していけたらいいな！
 
 # OAuth認証によるTwitter Botのつくりかた
 
 ## Twitterってなに？
+
  - [Twitter:](http://twitter.com/) これ
  - 国会議員もやってるWebサービス
  - 最近ドラマ化されましたね
 
 ### Twitterで遊びたい！
- - ロボット作る(BOT)
- - クライアントをつくる
- - つぶやきを解析したり(集合知)
+
+ 1. ロボット作る(BOT)
+ 2. クライアントをつくる
+ 3. つぶやきを解析したり(集合知)
 
 # Twitterで遊ぶためにはユーザ認証が必要
+
 なにはともあれ認証しないとTwitterで遊べない.
 
-## なんでOAuthなの？
+## なんでOAuth認証なの？
 
-### Basic認証は使えなくなる。
+## ユーザ名とパスワード入れるBasic認証じゃだめなの？
+
+## 理由は二つ
+
+# Basic認証は使えなくなる。
+
  - [Twitter Api](http://apiwiki.twitter.com/OAuth-FAQ)
- - We announced in December of 2009 the deprecation of Basic Auth.  Its removal date from the platform is set for *June 2010.*
 
-### セキュリティが大事な世の中
+## We announced in December of 2009 the deprecation of Basic Auth.  Its removal date from the platform is set for *June 2010.*
+
+# セキュリティが大事な世の中
+
  - [Uniqlo Lucky Line](http://japan.cnet.com/marketing/story/0,3800080523,20413873,00.htm) Twitterを使ったプロモーションサイト
  - ユーザ名の書かれたテキストファイルが流出した！
  - パスワードは流出していないが、Basic認証だったため不安が広がった。
 
 # OAuth認証超概要
 
-## サービスプロバイダー
+## 1. サービスプロバイダー
+
   ここではTwitter
-## コンシューマ
+
+## 2. コンシューマ
+
   ここではBot(うみったー)
-## ユーザ
+
+## 3. ユーザ
+
+# Basic認証編
+
+![Basic認証概要図](./Basic.png "Basic超概要図")
+
+# OAuth認証編
 
 ![OAuth超概要図](./OAuth.png "OAuth超概要図")
+
+# OAuthまとめ
+
+## OAuthではユーザ名とパスワードを入力する必要なし
+
+### 万が一漏洩があった場合でも、ユーザは乗っ取られない。
+
+## Basic認証と比べて、やることが増える。
 
 # うみったー
 [umitter](http://twitter.com/umitter)
 [github/umitter](http://github.com/mitsuhide/umitter)
+
 ## 沖縄の海の情報とおすすめのスポットをつぶやくだけのロボット
+
+## Ruby と TwitterAPIとcronでできている。
+
+### OAuthはsimple-oauthライブラリを使用
 
 [WeatherUnderground](http://nihongo.wunderground.com/global/stations/47930.html)から情報を取得してオススメスポットをつぶやく
 
 ## おすすめのスポットは僕の経験から選ばれる
+
+### 風がふいたら桶屋が儲かる
+
+####　西風がふいたら真栄田で泳げる。
+
 ### 現在は五箇所だけ
 
 # 僕とともに成長するBot
+
 ## 経験をプログラミングする
-## Bot作りたくなってきたでしょう？
+
+### 海で泳げば泳ぐほど賢くなる。
+
+### ほーらBotを作りたくなってきたでしょう？
 
 # 自分だけのBotをつくってみませんか？
-ご清聴ありがとうございました。
+
+## ライブラリなどではすでにOAUTHに対応しているのであんまり気にしないでも良いかも。
+
+### Ruby: simple-oauth, rubytter
+
+### Java: JTwitter
+
+### Python: twoauth
+
+### PHP: HTTP_OAuth
+
+# それで結局何が言いたかったの？
+
+## はごー勉強会やってるよ！
+
+###　真面目な話からネタまで
+
+## twitterのBot作ったよ.
+
+###　umitter
+
+## OAuth認証って簡単そう！
+
+###　Botを作りましょう
+
+# ご清聴ありがとうございました。
+
+- 発表資料: http://mitsuhide.github.com/umitter/
+- github/umitter: http://github.com/mitsuhide/umitter
+
+# 余白
+
+- [simple-oauth](http://github.com/shibason/simple-oauth)
+- [umitter](http://github.com/mitsuhide/umitter)
+- [Twitter Api](http://apiwiki.twitter.com/OAuth-FAQ)

@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>OAuth認証を使ったTwitter Bot開発</title>
+<!-- metadata -->
+<meta name="generator" content="Slide Show (S9)" />
+<meta name="version" content="S5 1.1" />
+<meta name="author" content="根保 光秀(ねほ みつひで)" />
+<meta name="company" content="株式会社 オーシーシー" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/i18n/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h1>株式会社 オーシーシー</h1>
+<h2>HagoACK</h2>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>OAuth認証を使ったTwitter Bot開発</h1>
+<h2>はごー勉強会</h2>
+<h3>根保 光秀(ねほ みつひで)</h3>
+<h4>株式会社 オーシーシー</h4>
+</div>
+
+
+
+<div class='slide'>
+
+<h1>突然ですがごめんなさい</h1>
+
+<h2>× Oath認証を使ったTwitter Bot開発</h2>
+
+<h2>○ OAuth認証を使ったTwitter Bot開発</h2>
+
+<p>タイポしてましたごめんなさい。
+以下OAuthでお送りします。</p>
+
+
+
+</div><div class='slide'>
+
+<h1>agenda</h1>
+
+<h2>お詫びと訂正</h2>
+
+<h2>自己紹介</h2>
+
+<h2>OAuth認証とは(概要)</h2>
+
+<h2>うみったーについて</h2>
+
+<p>テクニカルなお話は少なめでお送りします。</p>
+
+
+
+</div><div class='slide'>
+
+<h1>自己紹介</h1>
+
+<ul>
+<li>情報工 長山研卒</li>
+<li><a href="http://twitter.com/nefo_mi">Twitter:</a> nefo_mi</li>
+<li><a href="http://github.com/mitsuhide">Github:</a> mitsuhide</li>
+</ul>
+
+<h2>どこからきたの？</h2>
+
+<h3>はごー勉強会からやってきました。</h3>
+
+<p>社内の新しい物好きが寄り集まってできた勉強会</p>
+
+<ul>
+<li><a href="http://tomohiro.github.com/">まとめさいと</a></li>
+</ul>
+
+<h3>他の勉強会と連携していけたらいいな！</h3>
+
+
+
+</div><div class='slide'>
+
+<h1>OAuth認証によるTwitter Botのつくりかた</h1>
+
+<h2>Twitterってなに？</h2>
+
+<ul>
+<li><a href="http://twitter.com/">Twitter:</a> これ</li>
+<li>国会議員もやってるWebサービス</li>
+<li>最近ドラマ化されましたね</li>
+</ul>
+
+<h3>Twitterで遊びたい！</h3>
+
+<ol>
+<li>ロボット作る(BOT)</li>
+<li>クライアントをつくる</li>
+<li>つぶやきを解析したり(集合知)</li>
+</ol>
+
+
+
+</div><div class='slide'>
+
+<h1>Twitterで遊ぶためにはユーザ認証が必要</h1>
+
+<p>なにはともあれ認証しないとTwitterで遊べない.</p>
+
+<h2>なんでOAuth認証なの？</h2>
+
+<h2>ユーザ名とパスワード入れるBasic認証じゃだめなの？</h2>
+
+<h2>理由は二つ</h2>
+
+
+
+</div><div class='slide'>
+
+<h1>Basic認証は使えなくなる。</h1>
+
+<ul>
+<li><a href="http://apiwiki.twitter.com/OAuth-FAQ">Twitter Api</a></li>
+</ul>
+
+<h2>We announced in December of 2009 the deprecation of Basic Auth.  Its removal date from the platform is set for <em>June 2010.</em></h2>
+
+
+
+</div><div class='slide'>
+
+<h1>セキュリティが大事な世の中</h1>
+
+<ul>
+<li><a href="http://japan.cnet.com/marketing/story/0,3800080523,20413873,00.htm">Uniqlo Lucky Line</a> Twitterを使ったプロモーションサイト</li>
+<li>ユーザ名の書かれたテキストファイルが流出した！</li>
+<li>パスワードは流出していないが、Basic認証だったため不安が広がった。</li>
+</ul>
+
+
+
+</div><div class='slide'>
+
+<h1>OAuth認証超概要</h1>
+
+<h2>1. サービスプロバイダー</h2>
+
+<p>ここではTwitter</p>
+
+<h2>2. コンシューマ</h2>
+
+<p>ここではBot(うみったー)</p>
+
+<h2>3. ユーザ</h2>
+
+
+
+</div><div class='slide'>
+
+<h1>Basic認証編</h1>
+
+<p><img src="./Basic.png" alt="Basic認証概要図" title="Basic超概要図"/></p>
+
+
+
+</div><div class='slide'>
+
+<h1>OAuth認証編</h1>
+
+<p><img src="./OAuth.png" alt="OAuth超概要図" title="OAuth超概要図"/></p>
+
+
+
+</div><div class='slide'>
+
+<h1>OAuthまとめ</h1>
+
+<h2>OAuthではユーザ名とパスワードを入力する必要なし</h2>
+
+<h3>万が一漏洩があった場合でも、ユーザは乗っ取られない。</h3>
+
+<h2>Basic認証と比べて、やることが増える。</h2>
+
+
+
+</div><div class='slide'>
+
+<h1>うみったー</h1>
+
+<p><a href="http://twitter.com/umitter">umitter</a>
+<a href="http://github.com/mitsuhide/umitter">github/umitter</a></p>
+
+<h2>沖縄の海の情報とおすすめのスポットをつぶやくだけのロボット</h2>
+
+<h2>Ruby と TwitterAPIとcronでできている。</h2>
+
+<h3>OAuthはsimple-oauthライブラリを使用</h3>
+
+<p><a href="http://nihongo.wunderground.com/global/stations/47930.html">WeatherUnderground</a>から情報を取得してオススメスポットをつぶやく</p>
+
+<h2>おすすめのスポットは僕の経験から選ばれる</h2>
+
+<h3>風がふいたら桶屋が儲かる</h3>
+
+<h4>　西風がふいたら真栄田で泳げる。</h4>
+
+<h3>現在は五箇所だけ</h3>
+
+
+
+</div><div class='slide'>
+
+<h1>僕とともに成長するBot</h1>
+
+<h2>経験をプログラミングする</h2>
+
+<h3>海で泳げば泳ぐほど賢くなる。</h3>
+
+<h3>ほーらBotを作りたくなってきたでしょう？</h3>
+
+
+
+</div><div class='slide'>
+
+<h1>自分だけのBotをつくってみませんか？</h1>
+
+<h2>ライブラリなどではすでにOAUTHに対応しているのであんまり気にしないでも良いかも。</h2>
+
+<h3>Ruby: simple-oauth, rubytter</h3>
+
+<h3>Java: JTwitter</h3>
+
+<h3>Python: twoauth</h3>
+
+<h3>PHP: HTTP_OAuth</h3>
+
+
+
+</div><div class='slide'>
+
+<h1>それで結局何が言いたかったの？</h1>
+
+<h2>はごー勉強会やってるよ！</h2>
+
+<h3>　真面目な話からネタまで</h3>
+
+<h2>twitterのBot作ったよ.</h2>
+
+<h3>　umitter</h3>
+
+<h2>OAuth認証って簡単そう！</h2>
+
+<h3>　Botを作りましょう</h3>
+
+
+
+</div><div class='slide'>
+
+<h1>ご清聴ありがとうございました。</h1>
+
+<ul>
+<li>発表資料: http://mitsuhide.github.com/umitter/</li>
+<li>github/umitter: http://github.com/mitsuhide/umitter</li>
+</ul>
+
+
+
+</div><div class='slide'>
+
+<h1>余白</h1>
+
+<ul>
+<li><a href="http://github.com/shibason/simple-oauth">simple-oauth</a></li>
+<li><a href="http://github.com/mitsuhide/umitter">umitter</a></li>
+<li><a href="http://apiwiki.twitter.com/OAuth-FAQ">Twitter Api</a></li>
+</ul>
+
+</div></div>
+
+</body>
+</html>
