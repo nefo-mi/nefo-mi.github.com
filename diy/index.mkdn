@@ -2,8 +2,6 @@
 
 # Do it Yourself!
 
-![nefo\_mi](./fish.jpg)
-
 ねほみつひで
 
 !SLIDE
@@ -98,15 +96,15 @@ http://n-styles.com/main/archives/2004/07/20-033333.php
 
 !SLIDE
 
-![スモークチキン](./sumoku.jpg)
-
-!SLIDE
-
 # 100均パラダイス
 
 !SLIDE
 
 ![ミニモク](./minimoku.jpg)
+
+!SLIDE
+
+![スモークチキン](./sumoku.jpg)
 
 !SLIDE
 
