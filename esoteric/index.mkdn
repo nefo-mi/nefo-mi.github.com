@@ -1,0 +1,204 @@
+!SLIDE
+
+# 世にも奇妙な言語たち
+
+!SLIDE
+
+# puts "Hello, World!"
+
+!SLIDE
+
+# System.out.println("Hello, World!");
+
+!SLIDE
+
+# printf("Hello World\n");
+
+!SLIDE
+
+`>+++++++++[<++++++++>-]<.>+++++++[<++++>-]<+.+++++++..+++.>>>++++++++[<++++>-]`
+`<.>>>++++++++++[<+++++++++>-]<---.<<<<.+++.------.--------.>>+.`
+
+!SLIDE 
+
+# Esoteric Language
+
+!SLIDE
+
+# 奇妙な言語
+
+!SLIDE
+
+# もっとも有名なEsoteric language
+
+!SLIDE
+
+# Brain F*ck
+
+!SLIDE
+
+`>+++++++++[<++++++++>-]<.>+++++++[<++++>-]<+.+++++++..+++.>>>++++++++[<++++>-]`
+`<.>>>++++++++++[<+++++++++>-]<---.<<<<.+++.------.--------.>>+.`
+
+!SLIDE
+
+# 決して印刷できない言語
+
+!SLIDE
+
+# Whitespace
+
+!SLIDE
+
+    　
+
+!SLIDE
+
+# Hello World
+![white space](http://esoteric.voxelperfect.net/w/images/3/3c/Whitespace_in_vim2.png)
+
+!SLIDE
+
+# 「無視されてきた空白との公平性のために」
+
+!SLIDE
+
+# 二次元を駆け回る言語
+
+!SLIDE
+
+# Befunge
+
+!SLIDE
+[hello world](http://ja.wikipedia.org/wiki/Befunge)
+<pre>
+v @_       v
+>0"!dlroW"v 
+v  :#     < 
+>" ,olleH" v
+   ^       <
+</pre>
+
+!SLIDE
+
+# Wierd
+
+!SLIDE
+
+# 角度
+
+!SLIDE
+[hello world](./hello.w)
+<pre>
+H          ************************             ******************                                                 **********
+ e         *                      *            *                  *                                        *       *        *
+  l        *      ***             *             **                 *                                      * *      *        *
+!  o       *   ***   *          * *               *                 *                                     *  *     *        *
+    ,      *  *       *        ** *               *                 *                                    *    *    *      * *
+     W      * *        *      * * *               *                 *                                    *     *   *     ** *
+      r      *          *    *  * *               *  ************   *                                   *       *  *    * * *
+       d                 *  *   * *               * *          *    *                                  ******    *  *  *  * *
+        *                 * *   * *               **         **     *                                        *    *  * *  * *
+         *                 **   * *               *         *       *                                         *    *  ** *  *
+          *                 *   * *                         *       *                   **  **                 *    *  * *  *
+           *                    * *                        *        *                 **  ** *              **  *    *   *  *
+            ********************  *                        *        *  
+</pre>
+
+!SLIDE
+
+# 文学的プログラミング言語
+
+!SLIDE
+
+# Shakespeare
+
+!SLIDE
+
+<pre>
+The Ghost:
+ You pretty little warm thing! Thou art as prompt as the difference
+ between the square of thyself and your golden hair. Speak your mind.
+
+Juliet:
+ Listen to your heart!
+
+[Exit the Ghost]
+
+[Enter Romeo]
+
+Juliet:
+ Thou art as sweet as a sunny summer's day!
+</pre>
+
+!SLIDE
+
+# 形容詞の数
+
+!SLIDE
+
+# ちょっと草植えときますね型言語
+
+!SLIDE
+
+# Grass
+
+!SLIDE
+
+<pre>
+ｗｗｗｗｖｗｖｗｗＷＷｗｖｗｗＷｗｗｖｗｗｗｗＷＷＷｗｗＷｗｗＷＷＷＷＷＷｗｗｗｗＷｗ
+ｗｖｗＷＷｗＷｗｗｖｗＷＷＷｗｗｗｗｗＷｗｗｗｗｗｗＷＷｗＷＷＷｗＷＷＷＷＷＷｗＷ
+ＷＷＷＷＷＷＷｗｗｗＷｗｗＷＷＷＷＷＷＷＷＷＷｗＷｗｗｗｗｗＷＷＷＷＷＷＷＷ
+ＷＷＷｗｗｗｗｗＷＷＷＷＷＷＷＷＷＷＷＷｗｗｗｗＷＷＷＷＷＷＷＷＷＷＷＷＷ
+ｗｗｗＷＷＷＷＷＷＷＷＷＷＷＷＷＷｗｗｗＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷｗＷ
+</pre>
+
+!SLIDE
+
+# λ
+
+!SLIDE
+
+# 地獄から来た言語
+
+!SLIDE
+
+# Malbolge
+
+!SLIDE
+
+`b'BA@?>=<;:987654321r\`oo,llH('&%`
+`ed"c~w|{z9'Z%utsrqponmlkjihgfedc`
+`ba\`_^]\[ZYXWVUTSRQPONMLKJIHGFEDC`
+`BA@#>~~;|z8xwvuts10/.nm+*)i'&%fd`
+`"ba\`_^]yxwvXWsrqSonmPNjLKJIHGcba`
+`\`BA]\[=YXW:8T654321MLKJ,+GFE'CBA`
+`$">~}|{zy7654ts10/o-,+lj(hgfedc!`
+`~}|^]yxwYutsVTpRQPONMihgfHGcbaC_`
+`^]@>Z<;:987SRQP21MLK-IHG*(D&%$#"`
+`!=<;:zy765u321r/.-,+*)iX&%$dS!~}`
+`|{zy\wvutsUDConmlkjihgfedcFa\`B1@`
+`/[ZYXWVUTSRQPONM0K-zHGFEDCBA@?>=`
+`<;{j87x543sb0/.-,+*)('&%$#"!b\`O{`
+`zyxZIutsrqSBQ@lkjihgIIdcba\`B1j`
+
+!SLIDE
+
+# Hello Worldができるまでに2年かかった
+
+!SLIDE
+
+[Esolang](http://esoteric.voxelperfect.net/wiki/Main_Page)
+
+!SLIDE
+
+# 暴風型言語
+
+!SLIDE
+
+# Typhon
+
+!SLIDE
+
+[github](http://github.com/mitsuhide/Typhon)
+
