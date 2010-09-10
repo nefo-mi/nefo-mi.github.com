@@ -88,7 +88,7 @@ v  :#     <
 # 角度
 
 !SLIDE
-[hello world](./hello.w)
+[hello world](./hello.w.txt)
 <pre>
 H          ************************             ******************                                                 **********
  e         *                      *            *                  *                                        *       *        *
