@@ -1,0 +1,72 @@
+# 暴風型言語 Typhon
+## [ねほ みつひで](http://github.com/mitsuhide/Typhon)
+
+!SLIDE
+
+![Typhoon](./201010281030-00.png)
+#### ｺﾞｺﾞｺﾞｺﾞｺﾞｺﾞｺﾞ
+
+!SLIDE
+
+# Typhonとは
+
+!SLIDE
+
+# Esoteric Language
+## 難解言語
+
+!SLIDE
+
+![esoteric](http://ec2.images-amazon.com/images/I/41vb2HHFNJL._SS500_.jpg)
+
+!SLIDE
+
+![mikan](./mikan.png)
+
+!SLIDE
+
+![Typhoon](./201010281030-00.png)
+
+!SLIDE
+
+# 暴風型言語 Typhon
+
+!SLIDE
+
+# 言語処理系の実装方法
+
+!SLIDE
+
+# インタプリタ方式
+一行ずつ実行
+
+!SLIDE
+
+# 中間言語方式
+中間言語に変換して実行
+
+!SLIDE
+
+# コンパイラ方式
+機械語に変換して実行
+
+!SLIDE
+
+# トランスレータ方式
+別の言語に変換してから実行
+
+!SLIDE
+
+![Typhoon](./method.png)
+
+!SLIDE
+
+# Typhonは中間言語方式を採用
+
+!SLIDE
+
+# 構文解析
+Typhonではやってません
+
+#### Racc
+
